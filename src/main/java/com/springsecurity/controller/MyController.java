@@ -1,5 +1,7 @@
 package com.springsecurity.controller;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -34,6 +36,9 @@ public class MyController {
 	
 	@GetMapping("/service")
 	public String service(Model m) {
+		
+		m.addAttribute("title","I like to eat samosa");
+		m.addAttribute("subtitle",LocalDateTime.now().toString());
 		
 		
 		return "service";

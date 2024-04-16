@@ -6,9 +6,12 @@
 </head>
 <body>
 	
-	<footer id="fragmentTag" th:fragment="footer1">
+	<footer id="fragmentTag" th:fragment="footer1(title,subtitle)">
 	<div class="container">
-	<h1>About Vishnu Thakur</h1>
+	<h1 th:text="${title}"></h1>
+	<h1 th:text="${subtitle}"></h1>
+	
+	
 	<h1>Provide Good Content about programming</h1>
 	<h1>Feel free to contact and work with me</h1>
 	
